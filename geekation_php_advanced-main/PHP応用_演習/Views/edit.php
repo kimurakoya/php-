@@ -4,7 +4,7 @@ require_once(ROOT_PATH . '/Controllers/CasteriaController.php');
 $casteria = new CasteriaController();
 // $casteria->get($_GET);
 $edit = $casteria->get($_GET['data_edit']);
-foreach($edit as $param) {
+foreach ($edit as $param) {
 
 }
 
@@ -58,10 +58,10 @@ foreach($edit as $param) {
                   </dt>
                   <dt>
                       <input type="text" placeholder="山田太郎" name="fullname" id="fullname" value = "<?php
-                          if (isset($param["name"])) {
-                              echo $param["name"];
-                          }
-                      ?>">
+                        if (isset($param["name"])) {
+                            echo $param["name"];
+                        }
+                        ?>">
 
                   </dt>
 
@@ -80,9 +80,9 @@ foreach($edit as $param) {
                   </dt>
                   <dt>
                       <input type="text" placeholder="ヤマダタロウ" name="furigana" id="furigana" value = "<?php
-                      if (isset($param["kana"])) {
-                          echo $param["kana"];
-                      }?>">
+                        if (isset($param["kana"])) {
+                            echo $param["kana"];
+                        }?>">
                   </dt>
 
                   <dd>
@@ -101,9 +101,9 @@ foreach($edit as $param) {
                   </dt>
                   <dt>
                       <input type="text" placeholder="09012345678" name="tel" id="tel" value = "<?php
-                      if (isset($param["tel"])) {
-                          echo $param["tel"];
-                      }?>">
+                        if (isset($param["tel"])) {
+                            echo $param["tel"];
+                        }?>">
                   </dt>
 
                   <dd>
@@ -121,9 +121,9 @@ foreach($edit as $param) {
                   </dt>
                   <dt>
                       <input type="text" placeholder="test@test.co.jp" name="mail" id="mail" value = "<?php
-                      if (isset($param["email"])) {
-                          echo $param["email"];
-                      }?>">
+                        if (isset($param["email"])) {
+                            echo $param["email"];
+                        }?>">
                   </dt>
 
               </dl>
@@ -142,9 +142,9 @@ foreach($edit as $param) {
               <dl class="form_dl">
                   <dd>
                       <textarea name="body" id="body" cols="30" rows="10"><?php
-                      if (isset($param["body"])) {
-                          echo $param["body"];
-                      }?></textarea>
+                        if (isset($param["body"])) {
+                            echo $param["body"];
+                        }?></textarea>
                   </dd>
                   <dd>
                       <button type="submit" name = "button" class="contact_btn" id="button" value = "送信">更新</button>

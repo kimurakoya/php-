@@ -27,15 +27,14 @@ class CasteriaController
     {
       // var_dump($_POST);
         $this -> Casteria -> insertdata($this->request['post']);
-
     }
 
-   public function get($id)
-   {
+    public function get($id)
+    {
        //var_dump($_GET);
         $params = $this -> Casteria -> getdata($id);
         return $params;
-   }
+    }
 
     public function update($data)
     {
@@ -43,7 +42,7 @@ class CasteriaController
     }
 
     public function delete($data)
-    {  
+    {
         $this -> Casteria -> deletedata($data);
     }
 

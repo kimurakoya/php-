@@ -6,4 +6,3 @@ $casteria = $casteria->delete($data['data_delete']);
 
 
 header("Location: ./contact.php");
-?>

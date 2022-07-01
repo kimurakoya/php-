@@ -1,15 +1,19 @@
 <?php
 require_once(ROOT_PATH .'/database.php');
 
-class Db {
+class Db
+{
     protected $dbh;
 
-    public function __construct($dbh = null) {
-        if(!$dbh) { //接続情報が存在しない場合
+    public function __construct($dbh = null)
+    {
+        if (!$dbh) { //接続情報が存在しない場合
             try {
                 $this->dbh = new PDO(
                     'mysql:dbname='.DB_NAME.
-                    ';host='.DB_HOST, DB_USER, DB_PASSWD
+                    ';host='.DB_HOST,
+                    DB_USER,
+                    DB_PASSWD
                 );
                 //接続成功
             } catch (PDOException $e) {

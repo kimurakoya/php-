@@ -41,12 +41,12 @@ $params = $casteria->index();
                     </dd>
                     <dt>
                       <?php
-                      if (!empty($_SESSION["button"])) {
-                          if (empty($_SESSION["fullname"]) || mb_strlen($_SESSION["fullname"]) > 10) {
-                              echo '<font color = "red">氏名は必須入力です。10文字以内でご入力ください。</font> ';
-                          }
-                      }
-                      ?>
+                        if (!empty($_SESSION["button"])) {
+                            if (empty($_SESSION["fullname"]) || mb_strlen($_SESSION["fullname"]) > 10) {
+                                echo '<font color = "red">氏名は必須入力です。10文字以内でご入力ください。</font> ';
+                            }
+                        }
+                        ?>
                     </dt>
                     <dt>
                         <input type="text" placeholder="山田太郎" name="fullname" id="fullname" value = "<?php
@@ -61,12 +61,12 @@ $params = $casteria->index();
                     </dd>
                     <dt>
                       <?php
-                      if (!empty($_SESSION["button"])) {
-                          if (empty($_SESSION["furigana"]) || mb_strlen($_SESSION["furigana"]) > 10) {
-                              echo '<font color = "red">フリガナは必須入力です。10文字以内でご入力ください。</font> ';
-                          }
-                      }
-                      ?>
+                        if (!empty($_SESSION["button"])) {
+                            if (empty($_SESSION["furigana"]) || mb_strlen($_SESSION["furigana"]) > 10) {
+                                echo '<font color = "red">フリガナは必須入力です。10文字以内でご入力ください。</font> ';
+                            }
+                        }
+                        ?>
                     </dt>
                     <dt>
                         <input type="text" placeholder="ヤマダタロウ" name="furigana" id="furigana" value = "<?php
@@ -81,13 +81,13 @@ $params = $casteria->index();
                     </dd>
                     <dt>
                       <?php
-                      if (!empty($_SESSION["button"])) {
-                          if (empty($_SESSION["tel"])) {
-                          } elseif (!preg_match("/\A[0-9]+\z/", $_SESSION["tel"])) {
-                              echo '<font color = "red">電話番号は0-9の数字のみでご入力ください。</font> ';
-                          }
-                      }
-                      ?>
+                        if (!empty($_SESSION["button"])) {
+                            if (empty($_SESSION["tel"])) {
+                            } elseif (!preg_match("/\A[0-9]+\z/", $_SESSION["tel"])) {
+                                echo '<font color = "red">電話番号は0-9の数字のみでご入力ください。</font> ';
+                            }
+                        }
+                        ?>
                     </dt>
                     <dt>
                         <input type="text" placeholder="09012345678" name="tel" id="tel" value = "<?php
@@ -102,12 +102,12 @@ $params = $casteria->index();
                     </dd>
                     <dt>
                       <?php
-                      if (!empty($_SESSION["button"])) {
-                          if (empty($_SESSION["mail"]) || !preg_match("/\A([a-zA-Z0-9])+([a-zA-Z0-9._-])*@([a-zA-Z0-9])+([a-zA-Z0-9._-])+([a-zA-Z0-9])+\z/", $_SESSION["mail"])) {
-                              echo '<font color = "red">メールアドレスは正しくご入力ください。</font> ';
-                          }
-                      }
-                      ?>
+                        if (!empty($_SESSION["button"])) {
+                            if (empty($_SESSION["mail"]) || !preg_match("/\A([a-zA-Z0-9])+([a-zA-Z0-9._-])*@([a-zA-Z0-9])+([a-zA-Z0-9._-])+([a-zA-Z0-9])+\z/", $_SESSION["mail"])) {
+                                echo '<font color = "red">メールアドレスは正しくご入力ください。</font> ';
+                            }
+                        }
+                        ?>
                     </dt>
                     <dt>
                         <input type="text" placeholder="test@test.co.jp" name="mail" id="mail" value = "<?php
@@ -120,12 +120,12 @@ $params = $casteria->index();
                 <p class="bgc">お問い合わせ内容をご記入ください<span class="color1">*</span></p>
                 <dt>
                   <?php
-                  if (!empty($_SESSION["button"])) {
-                      if (empty($_SESSION["body"])) {
-                          echo '<font color = "red">お問い合わせは必須入力です。</font> ';
-                      }
-                  }
-                  ?>
+                    if (!empty($_SESSION["button"])) {
+                        if (empty($_SESSION["body"])) {
+                            echo '<font color = "red">お問い合わせは必須入力です。</font> ';
+                        }
+                    }
+                    ?>
                 </dt>
 
                 <dl class="form_dl">
@@ -151,7 +151,7 @@ $params = $casteria->index();
         </tr>
 
         <?php foreach ($params as $param) :?>
-        <?php foreach ($param as $data) :?>
+            <?php foreach ($param as $data) :?>
         <tr>
             <td><?php echo htmlspecialchars($data['name']) ?></td>
             <td><?php echo htmlspecialchars($data['kana']) ?></td>
@@ -174,7 +174,7 @@ $params = $casteria->index();
             </form>
         <tr>
 
-        <?php endforeach ;?>
+            <?php endforeach ;?>
         <?php endforeach ;?>
 
     </table>
